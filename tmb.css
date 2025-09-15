@@ -65,17 +65,22 @@ img {
     padding-top: 20px;
     display: flex;
     gap: 0px 0px;
+    justify-content: center;
+    align-items: stretch;
     
     
 }
 .resposta2 p {
     margin: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 90px;
     padding-left: 0px;
 }
 .resposta2 b {
-    font-size: 50px;
+    font-size: 30px;
+    padding: 0px;
+    margin-right: 0px;
+    
 }
 
 
@@ -119,15 +124,18 @@ img {
     gap: 0px 0px;
     
     
+    
+    
+    
 }
 .resposta3 p {
     margin: auto;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-right: 20px;
     padding-left: 0px;
 }
 .resposta3 b {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
