@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa Metabolica Basal</title>
+    <link rel="stylesheet" href="tmb.css">
+</head>
+<body>
+    <header style="display: flex; gap: 10px 10px; ">
+        <img src="img/foto1.png" style="width: 100px; height: 100px; ">
+    
+        <h1>Taxa Metabólica Basal</h1>
+    </header>
+
+    <section>
+        <div>
+           <p id="sexo">
+            Sexo:
+            <input type="radio" id="sexo_homem" name="sexo" value="Masculino">
+            <label for="sexo_homem">Homem</label>
+            <input type="radio" id="sexo_mulher" name="sexo" value="Feminino">
+            <label for="sexo_mulher">Mulher</label>
+            </p>
+
+            <p>Idade: <input type="number" id="idade" placeholder="30" style="width: 140px;"></p>
+            <p>Peso: <input type="number" id="peso" placeholder="70                         kg" style="width: 140px;"></p>
+            <p>Altura: <input type="number" id="altura" placeholder="180                       cm" style="width: 140px;"></p>
+
+            <p>Nivel de atividade: 
+            <select id="nivel"  style="border-radius: 10px; height: 25px; width: 150px;">
+                <option  value="Sedentário (nenhum exercicío)">Sedentário (nenhum exercicío)</option>
+                <option  value="Levemente Ativo (1-2 dias na semana)">Levemente Ativo (1-2 dias na semana)</option>
+                <option  value="Moderadamente ativo (3-5 dias na semana)">Moderadamente ativo (3-5 dias na semana)</option>
+                <option  value="Muito ativo (6-7 dias na semana)">Muito ativo (6-7 dias na semana)</option>
+                <option  value="Super ativo (2x por dia)">Super ativo (2x por dia)</option>
+                
+            </select>
+            </p>
+            
+        </div>
+        <button onclick="calcularTMB()">Calcular</button>
+
+        <div class ="resposta1" id="resposta1">
+            <h2 >Resultado</h2>
+        </div>
+
+        <div class="item"><h2>Gasto Energètico Total:</h2></div>
+        <div class="resposta2" id="resposta2"></div>
+        <div class="item2">
+            <p>O gasto Energético Total (GET), é a quantidade total de
+             energia que o corpo utiliza ao longo do dia para realizar
+            todas as suas funções, incluindo atividades vitais e físicas. </p>
+        </div>
+
+        <div class="item"><h2>Taxa Metabólica Basal</h2></div>
+        <div class="resposta2" id="get"></div>
+        <div class="item2">
+            <p>Taxa Metabólica Basal (TMB) é a quantidade mínima
+            de energia que o corpo necessita para realizar funções
+            vitais, em repouso absoluto.
+            </p>
+        </div>
+
+        <div class="item"><h2>Gasto Semanal de Energia:</h2></div>
+        <div class="resposta3" id="gse"></div>
+        <div class="item2">
+            <p>O Gasto Semanal de Energia (GSE) é a quantidade total de energia que o corpo consome
+                ao longo de uma semana, considerando todas as atividades realizadas.
+            </p>
+        </div>
+          
+            
+    </section>
+
+    <footer>&copy;Berg Andrade</footer>
+
+    <script src="script_tmb.js"></script>
+    
+</body>
+</html>
