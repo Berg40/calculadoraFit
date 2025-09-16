@@ -10,8 +10,17 @@ function calcularTMB(){
 
     let res = window.document.getElementById("resposta1");
     let resGet = window.document.getElementById("resposta2");
+    let getTexto = window.document.getElementById("getTexto")
+    let getTexto1 = window.document.getElementById("getTexto1");
+    
     let resTmb = window.document.getElementById("get");
+    let tmbTexto = window.document.getElementById("tmbTexto")
+    let tmbTexto1 = window.document.getElementById("tmbTexto1")
+    
     let resGse = window.document.getElementById("gse")
+    let gseTexto = window.document.getElementById("gseTexto")
+    let gseTexto1 = window.document.getElementById("gseTexto1")
+    
 
     // AQUI VOU CALCULAR O GASTO DE ENERGIA BASAL
     let tmbH = (10 * peso) + (6.25 * altura) - (5 * idade) + 5
@@ -40,13 +49,20 @@ function calcularTMB(){
                 <b>${peso}kg</b> e medindo <b>${altura}cm</b>, com atividade fìsica ` 
                 
         let a = res.innerHTML
+        getTexto.innerHTML = '<h2>Gasto Energètico Total:</h2>'
+        getTexto1.innerHTML = '<p>O gasto Energético Total (GET), é a quantidade total de energia que o corpo utiliza ao longo do dia para realizar todas as suas funções, incluindo atividades vitais e físicas. </p>'
+         
+        tmbTexto.innerHTML = '<h2>Taxa Metabólica Basal</h2>'
+        tmbTexto1.innerHTML = '<p>Taxa Metabólica Basal (TMB) é a quantidade mínima de energia que o corpo necessita para realizar funções vitais, em repouso absoluto.</p>'   
 
+        gseTexto.innerHTML = '<h2>Gasto Semanal de Energia:</h2>'
+        gseTexto1.innerHTML = '<p>O Gasto Semanal de Energia (GSE) é a quantidade total de energia que o corpo consome ao longo de uma semana, considerando todas as atividades realizadas.</p>'
         
-
-        
-        if (idade > 0 && peso > 0 && altura > 0) {
+        if (idade > 0 && idade < 100 && peso > 0 && peso < 200 && altura > 0 && altura < 300) {
             if (nivelAtv == "Sedentário (nenhum exercicío)") {
                 res.innerHTML = `${a}<b>${nivelAtv}</b>`
+                
+                
                 if (sexoSelecionado.value == "Masculino") {
                     let get = tmbH * 1.2
                     let gse = tmbH * 7
@@ -132,9 +148,11 @@ function calcularTMB(){
     else {
         alert("Escolha um sexo!!")
     }
-    
-    
-       
+      
+}
+
+function ir() {
+    window.location.href = "pagina.html"
 }
 
 
