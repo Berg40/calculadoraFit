@@ -142,11 +142,7 @@ img {
     height: auto;
     padding-top: 20px;
     display: flex;
-    gap: 0px 0px;
-    
-    
-    
-    
+    gap: 0px 0px;   
     
 }
 .resposta3 p {
@@ -182,7 +178,7 @@ img {
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 40px;
     
 } 
 .infPai img {
