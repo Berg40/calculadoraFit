@@ -1,4 +1,10 @@
 
+function animacao(el) {
+    el.classList.add("loading");
+    el.innerHTML = "Calculando...";
+    return el;
+
+}
 
 function calcularTMB(){
     let idade = window.document.getElementById("idade").value;
@@ -151,9 +157,19 @@ function calcularTMB(){
       
 }
 
-function ir() {
-    window.location.href = "pagina.html"
+function processar() {
+    const botao = document.querySelector("button");
+
+    animacao(botao);
+
+    setTimeout(() => {
+        botao.classList.remove('loading');
+        botao.innerHTML = 'Calcular de novo';
+        calcularTMB();
+    }, 2000);
 }
+
+
 
 
 
